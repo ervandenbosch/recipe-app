@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Link from 'next/link'
-import { React, useState, useEffect } from 'react'
+import { React, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun, faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons'
 import { Footer } from '../components/footer'
@@ -11,7 +11,6 @@ export default function MyApp({ Component, pageProps }) {
   const [dark, setDark] = useState(false)
   const [search, setSearch] = useState("")
   const [query, setQuery] = useState("chicken")
-  const [isLoading, setLoading] = useState(false)
 
   const handleDark = () => setDark(!dark)
 
