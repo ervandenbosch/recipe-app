@@ -1,6 +1,6 @@
 import Recipe from '../components/recipe'
 import { React } from 'react'
-import { useRecipesState } from './provider'
+import { useRecipesState } from '../components/provider'
 
 export default function Home() {
 

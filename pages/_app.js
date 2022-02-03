@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun, faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons'
 import { Footer } from '../components/footer'
 import { Searchbar } from '../components/searchbar'
-import { AppWrapper } from './provider'
+import { AppWrapper } from '../components/provider'
 
 export default function MyApp({ Component, pageProps }) {
   const [dark, setDark] = useState(false)
