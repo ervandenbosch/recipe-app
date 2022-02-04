@@ -30,7 +30,7 @@ export default function MyApp({ Component, pageProps }) {
        <div className="fixed top-0 z-99 w-full border drop-shadow-lg shadow-inner">
        <nav className="flex flex-row h-22  flex-nowrap border-b shadow-sm shadow-blue-400 p-4 bg-white dark:bg-gray-900 ">
        <Link href="/">
-        <a className="pt-2 text-4xl font-bold text-blue-500 dark:text-blue-300 hidden:sm">Foodnow</a>
+        <a className="pt-2 text-4xl font-bold text-blue-500 dark:text-blue-300 sm:hidden">Foodnow</a>
           </Link>
   <Searchbar placeholder="Search for recipes.." getSearch={getSearch} updateSearch={updateSearch} query={query} />
   <div className="flex flex-row m-4 font-bold text-gray-600 dark:text-gray-300"> 
