@@ -27,7 +27,7 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <div className={(dark ? "dark min-h-screen" : '"min-h-screen"')} id="app">
-       <div className="fixed top-0 z-5 w-full border drop-shadow-lg">
+       <div className="fixed top-0 z-99 w-full border drop-shadow-lg shadow-inner">
        <nav className="flex flex-row h-22  flex-nowrap border-b shadow-sm shadow-blue-400 p-4 bg-white dark:bg-gray-900 ">
        <Link href="/">
         <a className="pt-2 text-4xl font-bold text-blue-500 dark:text-blue-300">Foodnow</a>
