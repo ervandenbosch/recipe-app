@@ -37,13 +37,26 @@ export default function MyApp({ Component, pageProps }) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
+        document.getElementById("navbar").style.transitionDuration = "0.4s";
         document.getElementById("navbar").style.top = "-82px";
       }
       prevScrollpos = currentScrollPos;
     };
   }
 
+  function hideMenu2() {
+    var h = jQuery("navbar").height();
+    jQuery(window).onscroll = function () {
+      if (jQuery(window).scrollTop() > h) {
+        jQuery("navbar").fadeIn();
+      } else {
+        jQuery("navbar").fadeOut();
+      }
+    };
+  }
+
   useEffect(() => {
+    window.$ = window.jQuery = require("jquery");
     hideMenu();
   }, []);
 
