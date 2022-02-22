@@ -37,26 +37,14 @@ export default function MyApp({ Component, pageProps }) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
-        document.getElementById("navbar").style.transitionDuration = "0.4s";
-        document.getElementById("navbar").style.top = "-82px";
+        document.getElementById("navbar").style.transitionDuration = "0.3s";
+        document.getElementById("navbar").style.top = "-78px";
       }
       prevScrollpos = currentScrollPos;
     };
   }
 
-  function hideMenu2() {
-    var h = jQuery("navbar").height();
-    jQuery(window).onscroll = function () {
-      if (jQuery(window).scrollTop() > h) {
-        jQuery("navbar").fadeIn();
-      } else {
-        jQuery("navbar").fadeOut();
-      }
-    };
-  }
-
   useEffect(() => {
-    window.$ = window.jQuery = require("jquery");
     hideMenu();
   }, []);
 
@@ -66,9 +54,9 @@ export default function MyApp({ Component, pageProps }) {
         id="navbar"
         className="fixed top-0 z-99 w-full border drop-shadow-lg shadow-inner"
       >
-        <nav className="flex flex-row h-20  flex-nowrap border-b shadow-sm shadow-blue-400 p-4 bg-white dark:bg-gray-900 ">
+        <nav className="flex flex-row h-[74px]  flex-nowrap border-b shadow-sm shadow-blue-400 px-4 py-3 bg-white dark:bg-gray-900 ">
           <Link href="/">
-            <a className="pt-2 text-4xl font-bold text-blue-500 dark:text-blue-300 sm:hidden">
+            <a className="text-4xl font-bold text-blue-500 dark:text-blue-300 sm:hidden">
               Foodnow
             </a>
           </Link>
@@ -79,7 +67,7 @@ export default function MyApp({ Component, pageProps }) {
             query={query}
           />
 
-          <div className="flex flex-row m-4 font-bold text-gray-600 dark:text-gray-300">
+          <div className="flex flex-row m-3 font-bold text-gray-600 dark:text-gray-300">
             <div className="flex-none flex-nowrap z-99 relative ml-5 sm:hidden">
               <FontAwesomeIcon
                 icon={faMoon}
